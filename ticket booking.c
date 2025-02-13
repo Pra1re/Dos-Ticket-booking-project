@@ -115,7 +115,8 @@ int main() {
     print_options("|  2.Train                       |");
     print_options("|  3.Plane                       |");
     print_centered("__________________________________");
-
+    printf("\n\n");
+printf("Please select a Travelling method: ");
     int options;
     do{
     scanf("%d",&options);
@@ -159,14 +160,74 @@ printf("successfully copied = %s\n",queryforbus);
 
     print_centered("__________________________________");
 
-    int options;
+
+
+//-----------------------------------nested options-----------------------
+
+printf("\n\n");
+printf("Please select a boarding route: ");
+int boardingoption;
     do{
-    scanf("%d",&options);
-    if(options>3 || options<1){
+    scanf("%d",&boardingoption);
+    if(boardingoption>6 || boardingoption<1){
         print_centered("Please enter a valid option!!");
     }
     }
-    while(options>3 || options<1);
+    while(boardingoption>6 || boardingoption<1);
+
+char queryforbus[100];
+strcpy(queryforbus, boarding[boardingoption-1]);
+Sleep(500);
+system("cls");
+printf("Selected %s\n",queryforbus);
+//boardingoption holds boardingpoint
+
+//--------------------------------------destination----------------------------------------------
+
+
+printf("\n\n\n");
+    print_centered("----------------------------------");
+
+    print_centered("| Select a Destination point :   |");
+    char destination[100][100]={"Chittagong","Cox's Bazar","Khulna","Faridpur","Barishal"};
+    print_centered("----------------------------------");
+    for(int i=0;i<5;i++){
+    char formatted[100];
+    /*
+    char queryforbus[100];
+strcpy(queryforbus, boarding[i]);
+printf("successfully copied = %s\n",queryforbus);
+*/
+
+     snprintf(formatted, sizeof(formatted), "|  %d.%-26s  |", i + 1, destination[i]);
+
+     // passing the fully formatted string to print_options
+     print_options(formatted);
+
+    }
+
+    print_centered("__________________________________");
+
+
+printf("\n\n");
+printf("Please select a Destination Point: ");
+int destoption;
+    do{
+    scanf("%d",&destoption);
+    if(destoption>5 || destoption<1){
+        print_centered("Please enter a valid option!!");
+    }
+    }
+    while(destoption>5 || destoption<1);
+
+strcat(queryforbus,destination[destoption-1]);
+printf("query string = %s",queryforbus);
+///now we can look in the text file for xy to show the data in a table
+
+
+
+
+
 
 
 
@@ -179,6 +240,9 @@ printf("successfully copied = %s\n",queryforbus);
     }
 //------------------------------train-----------------------------------------
     else if(options==2){
+          //rafsan am working from here
+
+
         print_centered("U have selected Train");
     }
 //--------------------------------plane---------------------------------------
