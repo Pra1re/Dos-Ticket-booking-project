@@ -57,6 +57,9 @@ void print_options(const char *text) {
     printf("%*s%s\n", padding, "", text);
 }
 
+//my commit
+//2nd commit test
+
 // function to display a centered loading bar
 void show_loading_bar() {
     int screen_width = get_console_width();
