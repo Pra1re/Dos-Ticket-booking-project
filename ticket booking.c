@@ -94,7 +94,16 @@ int main() {
     //show_loading_bar(); //later dont forget to uncomment
     set_color(7);
     system("cls");  // clear console after loading completes
-
+ /*      ____  _____  _____  _    _ _______ ______
+  / __ \|  __ \|  __ \| |  | |__   __|  ____|
+ | |  | | |__) | |__) | |  | |  | |  | |__
+ | |  | |  _  /|  _  /| |  | |  | |  |  __|
+ | |__| | | \ \| | \ \| |__| |  | |  | |____
+  \____/|_|  \_\_|  \_\\____/   |_|  |______|
+  ------------------------------------------
+  |  Explore • Book • Travel • Enjoy!       |
+  ------------------------------------------
+*/
 
     printf("\n\n\n");
     print_centered("----------------------------------");
@@ -102,34 +111,80 @@ int main() {
     print_centered("|  Select a Travelling method :  |");
     print_centered("----------------------------------");
     print_options("|  1.Bus                         |");
+
     print_options("|  2.Train                       |");
     print_options("|  3.Plane                       |");
-    print_centered("----------------------------------");
+    print_centered("__________________________________");
 
     int options;
     do{
     scanf("%d",&options);
-    if(options>3){
+    if(options>3 || options<1){
         print_centered("Please enter a valid option!!");
     }
     }
-    while(options>3 && options<1);
+    while(options>3 || options<1);
+
+
+//---------------------------bus-----------------------------
+
     if(options==1){
+
+
+
         print_centered("U have selected bus");
+        Sleep(500);
+        system("cls");
         //bus option goes here
+        printf("\n\n\n");
+    print_centered("----------------------------------");
+
+    print_centered("|  Select a Boarding point :     |");
+    char boarding[100][100]={"Uttara","Khilkhet","Mohakhali","Saydabad","Guslistan","Sadarghat"};
+    print_centered("----------------------------------");
+    for(int i=0;i<6;i++){
+    char formatted[100];
+    /*
+    char queryforbus[100];
+strcpy(queryforbus, boarding[i]);
+printf("successfully copied = %s\n",queryforbus);
+*/
+
+     snprintf(formatted, sizeof(formatted), "|  %d.%-26s  |", i + 1, boarding[i]);
+
+     // passing the fully formatted string to print_options
+     print_options(formatted);
+
+    }
+
+    print_centered("__________________________________");
+
+    int options;
+    do{
+    scanf("%d",&options);
+    if(options>3 || options<1){
+        print_centered("Please enter a valid option!!");
+    }
+    }
+    while(options>3 || options<1);
+
+
+
+
+
+
 
 
 
     }
+//------------------------------train-----------------------------------------
     else if(options==2){
         print_centered("U have selected Train");
     }
+//--------------------------------plane---------------------------------------
     else if(options==3){
         print_centered("U have selected Plane");
     }
-
-
-
 
 
 
