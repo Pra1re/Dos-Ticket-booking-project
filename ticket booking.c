@@ -113,9 +113,13 @@ int main() {
         print_centered("Please enter a valid option!!");
     }
     }
-    while(options>3);
+    while(options>3 && options<1);
     if(options==1){
         print_centered("U have selected bus");
+        //bus option goes here
+
+
+
     }
     else if(options==2){
         print_centered("U have selected Train");
