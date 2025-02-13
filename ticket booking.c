@@ -24,7 +24,7 @@ void print_centered(const char *text) {
     int padding = (screen_width - strlen(text)) / 2;
     printf("%*s%s\n", padding, "", text);
 }
-
+//my commit
 // function to display a centered loading bar
 void show_loading_bar() {
     int screen_width = get_console_width();
