@@ -221,8 +221,120 @@ int destoption;
     while(destoption>5 || destoption<1);
 
 strcat(queryforbus,destination[destoption-1]);
-printf("query string = %s",queryforbus);
+//printf("query string = %s",queryforbus);
 ///now we can look in the text file for xy to show the data in a table
+system("cls");
+
+    FILE *bus = fopen("test.txt", "r");
+char line[100];
+printf("\n\n");
+print_centered("Available Bus");
+print_centered("-------------------\n\n");
+printf("---------------------------------------------------------------\n");
+printf("%-30s | %30s\n", "|Bus Name", "Price|");
+
+int busnumbers = 1;
+char foundbus[100][100];
+
+while (fgets(line, sizeof(line), bus)) {
+    // Check if the line starts with x
+    if (strncmp(line, queryforbus, strlen(queryforbus)) == 0) {
+        char *route = strtok(line, "$");
+        char *bus_name = strtok(NULL, "$");
+        char *price = strtok(NULL, "$");
+        strcpy(foundbus[busnumbers-1],bus_name);
+
+        // remove newline from price if it exists
+        if (price[strlen(price) - 1] == '\n') {
+            price[strlen(price) - 1] = '\0';
+        }
+
+        printf("---------------------------------------------------------------\n");
+        printf("|%d.%-28s", busnumbers, bus_name);
+        printf("|%30s|\n", price);
+        busnumbers++;
+    }
+}
+printf("---------------------------------------------------------------\n");
+
+fclose(bus);
+
+ printf("\n\n\n");
+    print_centered("---------------------------------------------");
+
+    print_centered("|  Select available ticket from the list :  |");
+        print_centered("---------------------------------------------");
+        printf("\n\n");
+/*
+for(int i=0;i<busnumbers-1;i++){
+    print_options("|  %d.%s                         |",i+1,foundbus);
+
+     }
+    print_centered("__________________________________");
+    printf("\n\n");
+    */
+    int busnumberoptions;
+printf("Please select a Bus number: ");
+    do{
+    scanf("%d",&busnumberoptions);
+    if(busnumberoptions>busnumbers-1 || busnumberoptions<1){
+        print_centered("Please enter a valid option!!");
+    }
+    }
+    while(busnumberoptions>busnumbers-1 || busnumberoptions<1);
+
+
+//read from seat.txt
+
+
+FILE *seat = fopen("seat.txt", "r");
+char seatline[100];
+
+int seatnumbers = 1;
+char foundseat[100][100];
+printf("----------------------------------------------------------------------------\n");
+while (fgets(seatline, sizeof(seatline), seat)) {
+    // Check if the line starts with x
+    if (strncmp(seatline, foundbus[busnumberoptions-1], strlen(foundbus[busnumberoptions-1])) == 0) {
+        char *bus_names = strtok(seatline, "$");
+        char *bus_price = strtok(NULL, "$");
+        char *seats = strtok(NULL, "$");
+
+
+
+        // remove newline from price if it exists
+        if (seats[strlen(seats) - 1] == '\n') {
+            seats[strlen(seats) - 1] = '\0';
+        }
+        strcpy(foundseat[seatnumbers-1],seats);
+        int seats_per_row = strlen(foundseat[seatnumbers - 1]) / 2;
+        for (int j = 0; j < strlen(foundseat[seatnumbers - 1]); j++) {
+        // Print seat number
+        printf("|%-1d - ", j + 1);
+
+        // Print 'X' in red and 'O' in white
+        if (foundseat[seatnumbers - 1][j] == '1') {
+            printf("\033[31m%c\033[0m | ",'X'); // red X
+        } else {
+            printf("\033[32m%c\033[0m |",'O'); // green O
+        }
+
+        // New line after half seats for 2-row display
+        if ((j + 1) % 7 == 0) {
+                printf("\n\n");
+        printf("----------------------------------------------------------------------------");
+            printf("\n\n");
+        }
+    }
+        seatnumbers++;
+    }
+}
+
+fclose(seat);
+
+
+
+    printf("\n");
 
 
 

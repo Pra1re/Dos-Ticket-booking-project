@@ -26,4 +26,13 @@ int main(){
     fclose(bus);
 
 
+
+    char destination[100][100]={"Chittagong","Cox's Bazar","Khulna","Faridpur","Barishal"};
+    for(int i=0;i<5;i++){
+
+        printf("%s\n",destination[i]);
+
+    }
+
+
 return 0;}
