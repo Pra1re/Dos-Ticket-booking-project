@@ -85,6 +85,10 @@ int main() {
 
     // welcome screen
     set_color(10);
+    printf("\n\n");
+    print_centered("___________");
+    print_centered("|_' '_'__'|");
+    print_centered("|_' '_'__'|");
     print_centered("====================================================");
     print_centered("================================================");
     print_centered("|      WELCOME TO TICKET BOOKING SYSTEM        |");
@@ -93,7 +97,8 @@ int main() {
     printf("\n");
 
     // show loading bar
-    //show_loading_bar(); //later dont forget to uncomment
+
+    show_loading_bar(); //later dont forget to uncomment
     set_color(7);
       // clear console after loading completes
  /*      ____  _____  _____  _    _ _______ ______
@@ -366,7 +371,7 @@ for (int j=0;j<ns;j+=2) {
 
                 }
         else{
-                printf("%-1d. \033[32m%-20c\033[0m |\n",j+2,'O'); // green O
+                printf("%-1d. \033[32m%-20c\033[0m |",j+2,'O'); // green O
 
 
         }
