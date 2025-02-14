@@ -371,7 +371,7 @@ for (int j=0;j<ns;j+=2) {
 
                 }
         else{
-                printf("%-1d. \033[32m%-20c\033[0m |",j+2,'O'); // green O
+                printf("%-1d. \033[32m%-20c\033[0m |\n",j+2,'O'); // green O
 
 
         }
@@ -509,11 +509,6 @@ while(seatcheck>ns || seatcheck<1 || foundseat[seatcheck-1]=='1');
 
 printf("\n");
 foundseat[seatcheck-1]='1';
-printf("desiredbus after modification = ");
-for(int i=0;i<ns;i++){
-    printf("%c ",foundseat[i]);
-}
-printf("\n");
 
 
 
@@ -545,7 +540,6 @@ while (fgets(line2, sizeof(line2), seat)){
             strcat(tempcat, price);
             strcat(tempcat, "$");
             strcat(tempcat, foundseat);
-            printf("string after concat = %s\n",tempcat);
 
             fprintf(temp, "%s", tempcat);
         } else {
@@ -566,7 +560,11 @@ fclose(temp);
 
 remove("seat.txt");
 rename("temp.txt", "seat.txt") ;
-
+system("cls");
+printf("\n\n\n\n\n\n\n\n\n");
+print_centered("Seat booking successful.....");
+Sleep(1500);
+system("cls");
 
 }
 else{
@@ -643,14 +641,14 @@ printf("\n\n\n\n\n\n");
 
 
    printf("\n\n\n");
-    print_centered("----------------------------------");
+    print_centered("-------------------------------");
 
-    print_centered("|  Select an Option :  |");
-    print_centered("----------------------------------");
-    print_options("|  1.Home                         |");
+    print_centered("|  Select an Option :         |");
+    print_centered("-------------------------------");
+    print_centered("|  1.Home                     |");
 
-    print_options("|  2.Exit                      |");
-    print_centered("__________________________________");
+    print_centered("|  2.Exit                     |");
+    print_centered("_______________________________");
     printf("\n\n");
 
 
