@@ -79,6 +79,8 @@ void show_loading_bar() {
 }
 
 int main() {
+    int exitcheck;
+
     system("cls");  // clears screen after loading bar loads
 
     // welcome screen
@@ -91,9 +93,9 @@ int main() {
     printf("\n");
 
     // show loading bar
-    show_loading_bar(); //later dont forget to uncomment
+    //show_loading_bar(); //later dont forget to uncomment
     set_color(7);
-    system("cls");  // clear console after loading completes
+      // clear console after loading completes
  /*      ____  _____  _____  _    _ _______ ______
   / __ \|  __ \|  __ \| |  | |__   __|  ____|
  | |  | | |__) | |__) | |  | |  | |  | |__
@@ -104,7 +106,8 @@ int main() {
   |  Explore • Book • Travel • Enjoy!       |
   ------------------------------------------
 */
-
+do{
+        system("cls");
     printf("\n\n\n");
     print_centered("----------------------------------");
 
@@ -116,9 +119,10 @@ int main() {
     print_options("|  3.Plane                       |");
     print_centered("__________________________________");
     printf("\n\n");
-printf("Please select a Travelling method: ");
+
     int options;
     do{
+    printf("Please select a Travelling method: ");
     scanf("%d",&options);
     if(options>3 || options<1){
         print_centered("Please enter a valid option!!");
@@ -165,9 +169,10 @@ printf("successfully copied = %s\n",queryforbus);
 //-----------------------------------nested options-----------------------
 
 printf("\n\n");
-printf("Please select a boarding route: ");
+
 int boardingoption;
     do{
+    printf("Please select a boarding point: ");
     scanf("%d",&boardingoption);
     if(boardingoption>6 || boardingoption<1){
         print_centered("Please enter a valid option!!");
@@ -210,9 +215,10 @@ printf("successfully copied = %s\n",queryforbus);
 
 
 printf("\n\n");
-printf("Please select a Destination Point: ");
+
 int destoption;
     do{
+    printf("Please select a Destination Point: ");
     scanf("%d",&destoption);
     if(destoption>5 || destoption<1){
         print_centered("Please enter a valid option!!");
@@ -274,8 +280,9 @@ for(int i=0;i<busnumbers-1;i++){
     printf("\n\n");
     */
     int busnumberoptions;
-printf("Please select a Bus number: ");
+
     do{
+    printf("Please select a Bus number: ");
     scanf("%d",&busnumberoptions);
     if(busnumberoptions>busnumbers-1 || busnumberoptions<1){
         print_centered("Please enter a valid option!!");
@@ -288,14 +295,14 @@ printf("Please select a Bus number: ");
 
 
 FILE *seat = fopen("seat.txt", "r");
-char seatline[100];
+char seatline[1000];
+char storebus[1000];
 
-int seatnumbers = 1;
-char foundseat[100][100];
-printf("----------------------------------------------------------------------------\n");
+char foundseat[1000];
 while (fgets(seatline, sizeof(seatline), seat)) {
     // Check if the line starts with x
     if (strncmp(seatline, foundbus[busnumberoptions-1], strlen(foundbus[busnumberoptions-1])) == 0) {
+        strcpy(storebus,seatline);//stores the whole line
         char *bus_names = strtok(seatline, "$");
         char *bus_price = strtok(NULL, "$");
         char *seats = strtok(NULL, "$");
@@ -303,12 +310,12 @@ while (fgets(seatline, sizeof(seatline), seat)) {
 
 
         // remove newline from price if it exists
-        if (seats[strlen(seats) - 1] == '\n') {
+       /* if (seats[strlen(seats) - 1] == '\n') {
             seats[strlen(seats) - 1] = '\0';
-        }
-        strcpy(foundseat[seatnumbers-1],seats);
-        int seats_per_row = strlen(foundseat[seatnumbers - 1]) / 2;
-        for (int j = 0; j < strlen(foundseat[seatnumbers - 1]); j++) {
+        }*/
+        strcpy(foundseat,seats);//foundseat just stores the binary string
+        //int seats_per_row = strlen(foundseat[seatnumbers - 1]) / 2;
+        /*for (int j = 0; j < strlen(foundseat[seatnumbers - 1]); j++) {
         // Print seat number
         printf("|%-1d - ", j + 1);
 
@@ -325,12 +332,258 @@ while (fgets(seatline, sizeof(seatline), seat)) {
         printf("----------------------------------------------------------------------------");
             printf("\n\n");
         }
-    }
-        seatnumbers++;
+    }*/
+
+
+
     }
 }
 
 fclose(seat);
+///------------printing loop---------------
+system("cls");
+printf("\n\n\n\n");
+print_centered("Select available seat from below\n\n\n");
+int ns=strlen(foundseat)-1;
+for (int j=0;j<ns;j+=2) {
+        // Print seat number
+
+        // Print 'X' in red and 'O' in white
+        if(j<9){
+
+
+        if (foundseat[j] == '1') {
+
+
+        printf("--------------------------------------------------\n");
+        printf("%-1d. \033[31m%-20c\033[0m |",j+1,'X'); // red X
+        if((j+1)<ns){
+
+                if(j+1<9){
+
+                if (foundseat[j+1] == '1') {
+                printf("%-1d. \033[31m%-20c\033[0m |\n",j+2,'X'); // red X
+
+                }
+        else{
+                printf("%-1d. \033[32m%-20c\033[0m |\n",j+2,'O'); // green O
+
+
+        }
+                }
+                else{
+                        if (foundseat[j+1] == '1') {
+                printf("%-1d. \033[31m%-19c\033[0m |\n",j+2,'X'); // red X
+
+                }
+        else{
+                printf("%-1d. \033[32m%c\033[0m |\n",j+2,'O'); // green O
+
+
+        }
+
+
+
+
+
+                }
+
+
+
+        }
+
+
+        } else {
+            printf("--------------------------------------------------\n");
+            printf("%-1d. \033[32m%-20c\033[0m |",j+1,'O'); // green O
+            if((j+1)<ns){
+                if (foundseat[j+1] == '1') {
+                printf("%-1d. \033[31m%-20c\033[0m |\n",j+2,'X'); // red X
+
+                }
+        else{
+                printf("%-1d. \033[32m%-20c\033[0m |\n",j+2,'O'); // green O
+
+
+        }
+
+        }
+        }
+
+        }
+     //-------------------------------------------------------
+
+
+else{
+    if (foundseat[j] == '1') {
+
+
+        printf("---------------------------------------------------\n");
+        printf("%-1d. \033[31m%-19c\033[0m |",j+1,'X'); // red X
+        if((j+1)<ns){
+                if (foundseat[j+1] == '1') {
+                printf("%-1d. \033[31m%-19c\033[0m |\n",j+2,'X'); // red X
+
+                }
+        else{
+                printf("|%-1d. \033[32m%-19c\033[0m |\n",j+2,'O'); // green O
+
+
+        }
+
+        }
+
+
+        } else {
+            printf("---------------------------------------------------\n");
+            printf("%-1d. \033[32m%-19c\033[0m |",j+1,'O'); // green O
+            if((j+1)<ns){
+                if (foundseat[j+1] == '1') {
+                printf("%-1d. \033[31m%-19c\033[0m |\n",j+2,'X'); // red X
+
+                }
+        else{
+                printf("%-1d. \033[32m%-19c\033[0m |\n",j+2,'O'); // green O
+
+
+        }
+
+        }
+        }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+    }
+printf("\n---------------------------------------------------\n");
+  printf("\n\n");
+int available=0;
+for(int i=0;i<ns;i++){
+    if(foundseat[i]=='0'){
+        available++;
+    }
+}
+if(available>0){
+    int seatcheck;
+
+
+    do{
+    printf("please select a seat: ");
+    scanf("%d",&seatcheck);
+    if(seatcheck>ns || seatcheck<1){
+        printf("Please select a valid option!!\n");
+    }
+    else if(foundseat[seatcheck-1]=='1'){
+        printf("This seat is already booked,pls select another seat\n");
+    }
+}
+while(seatcheck>ns || seatcheck<1 || foundseat[seatcheck-1]=='1');
+
+
+///--------------printing loop------------------
+
+///changing phase based on ticket selection
+
+
+
+printf("\n");
+foundseat[seatcheck-1]='1';
+printf("desiredbus after modification = ");
+for(int i=0;i<ns;i++){
+    printf("%c ",foundseat[i]);
+}
+printf("\n");
+
+
+
+
+
+///changing phase based on ticket selection
+
+///---------------------seat booking----------------
+
+///found seat = 101001111101001011111
+///storebus = Baler-bus$100tk$101001111101001011111
+
+seat = fopen("seat.txt", "r");
+FILE *temp=fopen("temp.txt","w");
+char line2[500];
+
+while (fgets(line2, sizeof(line2), seat)){
+    if (strcmp(storebus, line2) == 0) {
+            char *bus_name = strtok(line2, "$");
+            char *price = strtok(NULL, "$");
+            char *availability = strtok(NULL, "$");
+
+            //printf("bus name = %s || bus price is = %s  || bus availability = %s\n",bus_name,price,availability);
+
+
+            char tempcat[1000] = "";
+            strcat(tempcat, bus_name);
+            strcat(tempcat, "$");
+            strcat(tempcat, price);
+            strcat(tempcat, "$");
+            strcat(tempcat, foundseat);
+            printf("string after concat = %s\n",tempcat);
+
+            fprintf(temp, "%s", tempcat);
+        } else {
+            fprintf(temp, "%s", line2);
+        }
+
+
+
+
+
+}
+
+
+
+
+fclose(seat);
+fclose(temp);
+
+remove("seat.txt");
+rename("temp.txt", "seat.txt") ;
+
+
+}
+else{
+        system("cls");
+printf("\n\n\n\n\n\n");
+    print_centered("No seat available currently,Please try again later.....");
+    Sleep(1500);
+}
+
+
+
+
+
+///---------------------seat booking----------------
+
+
+
+
+
+
+
+
 
 
 
@@ -365,6 +618,55 @@ fclose(seat);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //go again
+//system("cls");
+
+
+   printf("\n\n\n");
+    print_centered("----------------------------------");
+
+    print_centered("|  Select an Option :  |");
+    print_centered("----------------------------------");
+    print_options("|  1.Home                         |");
+
+    print_options("|  2.Exit                      |");
+    print_centered("__________________________________");
+    printf("\n\n");
+
+
+    do{
+    printf("Please select an Option: ");
+    scanf("%d",&exitcheck);
+    if(exitcheck>2 || exitcheck<1){
+        print_centered("Please enter a valid option!!");
+    }
+    }
+    while(exitcheck>2 || exitcheck<1);
+
+
+
+
+
+}
+   while(exitcheck==1);
+
+
+getchar();
 
     return 0;
 }
