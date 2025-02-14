@@ -249,7 +249,7 @@ char foundbus[100][100];
 
 while (fgets(line, sizeof(line), bus)) {
     // Check if the line starts with x
-    if (strncmp(line, queryforbus, strlen(queryforbus)) == 0) {
+    if (strncmp(line, queryforbus, strlen(queryforbus)) == 0){
         char *route = strtok(line, "$");
         char *bus_name = strtok(NULL, "$");
         char *price = strtok(NULL, "$");

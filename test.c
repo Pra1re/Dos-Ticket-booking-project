@@ -40,7 +40,6 @@ for(int i=0;i<strlen(desiredbus);i++){
     else{
         printf("%d) %c\n",i+1,'O');
     }
-
 }
 int available=0;
 for(int i=0;i<strlen(desiredbus);i++){
