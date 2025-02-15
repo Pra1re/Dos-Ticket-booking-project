@@ -8,3 +8,4 @@ int traveloption();
 int homexit();
 int travordash();
 void userdash();
+void welcome_screen();

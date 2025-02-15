@@ -47,16 +47,7 @@ int main()
 
     // welcome screen
     set_color(10);
-    printf("\n\n");
-    print_centered("___________");
-    print_centered("|_' '_'__'|");
-    print_centered("|_' '_'__'|");
-    print_centered("====================================================");
-    print_centered("================================================");
-    print_centered("|      WELCOME TO TICKET BOOKING SYSTEM        |");
-    print_centered("================================================");
-    print_centered("====================================================");
-    printf("\n");
+    welcome_screen();
 
     // show loading bar
 
@@ -112,6 +103,7 @@ int main()
 //go again
 //system("cls");
         exitcheck=homexit();
+
 
     }
     while(exitcheck==1);
