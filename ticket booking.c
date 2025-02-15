@@ -60,7 +60,7 @@ int main()
 
     // show loading bar
 
-    show_loading_bar(); //later dont forget to uncomment
+    //show_loading_bar(); //later dont forget to uncomment
     set_color(7);
     // clear console after loading completes
     /*      ____  _____  _____  _    _ _______ ______

@@ -15,7 +15,6 @@ printf("\n\n\n");
         print_centered("|  Select an Option :         |");
         print_centered("-------------------------------");
         print_centered("|  1.Home                     |");
-
         print_centered("|  2.Exit                     |");
         print_centered("_______________________________");
         printf("\n\n");

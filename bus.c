@@ -229,158 +229,89 @@
             printf("\n\n\n\n");
             print_centered("Select available seat from below\n\n\n");
             int ns=strlen(foundseat)-1;
-            for (int j=0; j<ns; j+=2)
+            for (int j=0; j<ns; j+=4)
             {
-                // Print seat number
+                ///found seat = 101001111101001011111
+               ///storebus = Baler-bus$100tk$101001111101001011111
 
-                // Print 'X' in red and 'O' in white
-                if(j<9)
-                {
+                   /* if((j+4)<ns){
 
+                           printf("--------------------------------------------------\n");
+         (foundseat[j]=='1'?printf("|    \033[31mX\033[0m    "):printf("|    \033[32mO\033[0m    "));(foundseat[j+1]=='1'?printf("|    \033[31mX\033[0m    "):printf("|    \033[32mO\033[0m    "));(foundseat[j+2]=='1'?printf("|    \033[31mX\033[0m    "):printf("|    \033[32mO\033[0m    "));(foundseat[j+3]=='1'?printf("|    \033[31mX\033[0m    "):printf("|    \033[32mO\033[0m    "));(foundseat[j+4]=='1'?printf("|    \033[31mX\033[0m    |\n"):printf("|    \033[32mO\033[0m    |\n"));
 
-                    if (foundseat[j] == '1')
-                    {
+                    }*/
+                    if(j<=8){
+                    if((j+3)<ns){
+                            printf("---------------------                         ---------------------\n");
+                            if(j<8){
 
-
-                        printf("--------------------------------------------------\n");
-                        printf("%-1d. \033[31m%-20c\033[0m |",j+1,'X'); // red X
-                        if((j+1)<ns)
-                        {
-
-                            if(j+1<9)
-                            {
-
-                                if (foundseat[j+1] == '1')
-                                {
-                                    printf("%-1d. \033[31m%-20c\033[0m |\n",j+2,'X'); // red X
-
-                                }
-                                else
-                                {
-                                    printf("%-1d. \033[32m%-20c\033[0m |\n",j+2,'O'); // green O
-
-
-                                }
+         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j):printf("|    \033[32m%d\033[0m    ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |                         ",j+1):printf("|    \033[32m%d\033[0m    |                         ",j+1));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m    ",j+2):printf("|    \033[32m%d\033[0m    ",j+2));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+3):printf("|    \033[32m%d\033[0m    |\n",j+3));
                             }
-                            else
-                            {
-                                if (foundseat[j+1] == '1')
-                                {
-                                    printf("%-1d. \033[31m%-19c\033[0m |\n",j+2,'X'); // red X
-
-                                }
-                                else
-                                {
-                                    printf("%-1d. \033[32m%c\033[0m |\n",j+2,'O'); // green O
-
-
-                                }
-
-
-
-
+                            else{
+                                (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j):printf("|    \033[32m%d\033[0m    ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |                         ",j+1):printf("|    \033[32m%d\033[0m    |                         ",j+1));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   ",j+2):printf("|    \033[32m%d\033[0m   ",j+2));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+3):printf("|    \033[32m%d\033[0m   |\n",j+3));
 
                             }
+                    }
+                    else if((j+2)<ns){
+                        printf("---------------------                          -----------\n");
 
-
-
-                        }
+         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j):printf("|    \033[32m%d\033[0m    ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |                         ",j+1):printf("|    \033[32m%d\033[0m    |                         ",j+1));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+2):printf("|    \033[32m%d\033[0m    |\n",j+2));
 
 
                     }
-                    else
-                    {
-                        printf("--------------------------------------------------\n");
-                        printf("%-1d. \033[32m%-20c\033[0m |",j+1,'O'); // green O
-                        if((j+1)<ns)
-                        {
-                            if (foundseat[j+1] == '1')
-                            {
-                                printf("%-1d. \033[31m%-20c\033[0m |\n",j+2,'X'); // red X
+                    else if((j+1)<ns){
 
-                            }
-                            else
-                            {
-                                printf("%-1d. \033[32m%-20c\033[0m |\n",j+2,'O'); // green O
+                        printf("---------------------\n");
+         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j):printf("|    \033[32m%d\033[0m    ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+1):printf("|    \033[32m%d\033[0m    |\n",j+1));
 
-
-                            }
-
-                        }
                     }
+                    else{
+                         printf("-----------\n");
 
-                }
-                //-------------------------------------------------------
-
-
-                else
-                {
-                    if (foundseat[j] == '1')
-                    {
+      (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    |\n",j):printf("|    \033[32m%d\033[0m    |\n",j));
 
 
-                        printf("---------------------------------------------------\n");
-                        printf("%-1d. \033[31m%-19c\033[0m |",j+1,'X'); // red X
-                        if((j+1)<ns)
-                        {
-                            if (foundseat[j+1] == '1')
-                            {
-                                printf("%-1d. \033[31m%-19c\033[0m |\n",j+2,'X'); // red X
+                    }}else{
 
-                            }
-                            else
-                            {
-                                printf("|%-1d. \033[32m%-19c\033[0m |\n",j+2,'O'); // green O
+                    if((j+3)<ns){
+                            printf("---------------------                         ---------------------\n");
 
+         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   ",j):printf("|    \033[32m%d\033[0m   ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+1):printf("|    \033[32m%d\033[0m   |                         ",j+1));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   ",j+2):printf("|    \033[32m%d\033[0m   ",j+2));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+3):printf("|    \033[32m%d\033[0m   |\n",j+3));
 
-                            }
+                    }
+                    else if((j+2)<ns){
+                        printf("---------------------                          -----------\n");
 
-                        }
+         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   ",j):printf("|    \033[32m%d\033[0m   ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+1):printf("|    \033[32m%d\033[0m   |                         ",j+1));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+2):printf("|    \033[32m%d\033[0m   |\n",j+2));
 
 
                     }
-                    else
-                    {
-                        printf("---------------------------------------------------\n");
-                        printf("%-1d. \033[32m%-19c\033[0m |",j+1,'O'); // green O
-                        if((j+1)<ns)
-                        {
-                            if (foundseat[j+1] == '1')
-                            {
-                                printf("%-1d. \033[31m%-19c\033[0m |\n",j+2,'X'); // red X
+                    else if((j+1)<ns){
 
-                            }
-                            else
-                            {
-                                printf("%-1d. \033[32m%-19c\033[0m |\n",j+2,'O'); // green O
+                        printf("---------------------\n");
+         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   ",j):printf("|    \033[32m%d\033[0m   ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+1):printf("|    \033[32m%d\033[0m   |\n",j+1));
+
+                    }
+                    else{
+                         printf("-----------\n");
+
+      (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   |\n",j):printf("|    \033[32m%d\033[0m   |\n",j));
 
 
-                            }
-
-                        }
                     }
 
 
 
 
 
-
-
-
-                }
-
-
-
-
-
-
+                    }
 
 
 
 
 
             }
-            printf("\n---------------------------------------------------\n");
+            //printf("--------------------\n");
             printf("\n\n");
             int available=0;
             for(int i=0; i<ns; i++)
