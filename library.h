@@ -1,0 +1,8 @@
+void show_loading_bar();
+int get_console_width();
+void set_color(int color);
+void print_centered(const char *text);
+void print_options(const char *text);
+void bus();
+int traveloption();
+int homexit();
