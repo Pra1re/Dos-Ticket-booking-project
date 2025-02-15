@@ -245,30 +245,30 @@
                             printf("---------------------                         ---------------------\n");
                             if(j<8){
 
-         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j):printf("|    \033[32m%d\033[0m    ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |                         ",j+1):printf("|    \033[32m%d\033[0m    |                         ",j+1));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m    ",j+2):printf("|    \033[32m%d\033[0m    ",j+2));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+3):printf("|    \033[32m%d\033[0m    |\n",j+3));
+         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j+1):printf("|    \033[32m%d\033[0m    ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |                         ",j+2):printf("|    \033[32m%d\033[0m    |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m    ",j+3):printf("|    \033[32m%d\033[0m    ",j+3));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+4):printf("|    \033[32m%d\033[0m    |\n",j+4));
                             }
                             else{
-                                (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j):printf("|    \033[32m%d\033[0m    ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |                         ",j+1):printf("|    \033[32m%d\033[0m    |                         ",j+1));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   ",j+2):printf("|    \033[32m%d\033[0m   ",j+2));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+3):printf("|    \033[32m%d\033[0m   |\n",j+3));
+                                (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j+1):printf("|    \033[32m%d\033[0m    ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+2):printf("|    \033[32m%d\033[0m   |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   ",j+3):printf("|    \033[32m%d\033[0m   ",j+3));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+4):printf("|    \033[32m%d\033[0m   |\n",j+4));
 
                             }
                     }
                     else if((j+2)<ns){
                         printf("---------------------                          -----------\n");
 
-         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j):printf("|    \033[32m%d\033[0m    ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |                         ",j+1):printf("|    \033[32m%d\033[0m    |                         ",j+1));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+2):printf("|    \033[32m%d\033[0m    |\n",j+2));
+         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j+1):printf("|    \033[32m%d\033[0m    ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |                         ",j+2):printf("|    \033[32m%d\033[0m    |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+3):printf("|    \033[32m%d\033[0m    |\n",j+3));
 
 
                     }
                     else if((j+1)<ns){
 
                         printf("---------------------\n");
-         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j):printf("|    \033[32m%d\033[0m    ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+1):printf("|    \033[32m%d\033[0m    |\n",j+1));
+         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j+1):printf("|    \033[32m%d\033[0m    ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+2):printf("|    \033[32m%d\033[0m    |\n",j+2));
 
                     }
                     else{
                          printf("-----------\n");
 
-      (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    |\n",j):printf("|    \033[32m%d\033[0m    |\n",j));
+      (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+1):printf("|    \033[32m%d\033[0m    |\n",j+1));
 
 
                     }}else{
@@ -276,26 +276,26 @@
                     if((j+3)<ns){
                             printf("---------------------                         ---------------------\n");
 
-         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   ",j):printf("|    \033[32m%d\033[0m   ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+1):printf("|    \033[32m%d\033[0m   |                         ",j+1));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   ",j+2):printf("|    \033[32m%d\033[0m   ",j+2));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+3):printf("|    \033[32m%d\033[0m   |\n",j+3));
+         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   ",j+1):printf("|    \033[32m%d\033[0m   ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+2):printf("|    \033[32m%d\033[0m   |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   ",j+3):printf("|    \033[32m%d\033[0m   ",j+3));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+4):printf("|    \033[32m%d\033[0m   |\n",j+4));
 
                     }
                     else if((j+2)<ns){
                         printf("---------------------                          -----------\n");
 
-         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   ",j):printf("|    \033[32m%d\033[0m   ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+1):printf("|    \033[32m%d\033[0m   |                         ",j+1));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+2):printf("|    \033[32m%d\033[0m   |\n",j+2));
+         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   ",j+1):printf("|    \033[32m%d\033[0m   ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+2):printf("|    \033[32m%d\033[0m   |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+3):printf("|    \033[32m%d\033[0m   |\n",j+3));
 
 
                     }
                     else if((j+1)<ns){
 
                         printf("---------------------\n");
-         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   ",j):printf("|    \033[32m%d\033[0m   ",j));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+1):printf("|    \033[32m%d\033[0m   |\n",j+1));
+         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   ",j+1):printf("|    \033[32m%d\033[0m   ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+2):printf("|    \033[32m%d\033[0m   |\n",j+2));
 
                     }
                     else{
                          printf("-----------\n");
 
-      (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   |\n",j):printf("|    \033[32m%d\033[0m   |\n",j));
+      (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+1):printf("|    \033[32m%d\033[0m   |\n",j+1));
 
 
                     }
