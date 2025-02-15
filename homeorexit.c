@@ -30,6 +30,6 @@ printf("\n\n\n");
             }
         }
         while(exitcheck>2 || exitcheck<1);
-
+system("cls");
 return exitcheck;
 }

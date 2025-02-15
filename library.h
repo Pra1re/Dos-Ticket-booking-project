@@ -6,3 +6,5 @@ void print_options(const char *text);
 void bus();
 int traveloption();
 int homexit();
+int travordash();
+void userdash();

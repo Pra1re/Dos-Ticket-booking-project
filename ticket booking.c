@@ -60,8 +60,9 @@ int main()
 
     // show loading bar
 
-    //show_loading_bar(); //later dont forget to uncomment
+    show_loading_bar(); //later dont forget to uncomment
     set_color(7);
+    system("cls");
     // clear console after loading completes
     /*      ____  _____  _____  _    _ _______ ______
      / __ \|  __ \|  __ \| |  | |__   __|  ____|
@@ -75,10 +76,18 @@ int main()
     */
     do
     {
-        system("cls");
+        int dashtrav=travordash();
+
+        if(dashtrav==1){
+                userdash();
+
+        }
+        else{
+
+///-------------------------showing travel options----------------------
         int options =traveloption();
 
-//---------------------------bus-----------------------------
+///---------------------------bus-----------------------------
 
         if(options==1)
         {
@@ -99,7 +108,7 @@ int main()
             print_centered("U have selected Plane");
         }
 
-
+        }
 //go again
 //system("cls");
         exitcheck=homexit();
