@@ -1,1 +1,1 @@
-gcc "ticket booking.c" library.c bus.c homeorexit.c traveloption.c userdashboard.c travdash.c welcome.c -o program.exe
+gcc "ticket booking.c" library.c markseatvisited.c bus.c homeorexit.c traveloption.c moneydeduct.c userdashboard.c travdash.c welcome.c seatdesign.c -o program.exe

@@ -231,7 +231,7 @@
             printf("\n\n\n\n");
             print_centered("Select available seat from below\n\n\n");
             int ns=strlen(foundseat)-1;
-            ///seat design
+            ///-----------------seat design-------------------------------------
             seatdesign(ns,foundseat);
             //printf("--------------------\n");
             printf("\n\n");
@@ -317,118 +317,16 @@ if(newbalance>=0){
 char nbalanceforfile[100]="";
 sprintf(nbalanceforfile, "%d", newbalance);
 
-FILE *temp=fopen("temp.txt","w");
-creditcard=fopen("creditcard.txt","r");
-char line2[100];
-while(fgets(line2,sizeof(line2),creditcard)){
-
-        char *fetchedid=strtok(line2,"$");
-        char *fetchedpin=strtok(NULL,"$");
-        char *fetchedstatus=strtok(NULL,"$");
-        char *fetchedbalance=strtok(NULL,"$");
-    if (strcmp(fetchedid, id) == 0) {
-            char tempcat[1000] = "";
-            strcat(tempcat, fetchedid);
-            strcat(tempcat, "$");
-            strcat(tempcat, fetchedpin);
-            strcat(tempcat, "$");
-            strcat(tempcat, fetchedstatus);
-            strcat(tempcat, "$");
-            strcat(tempcat, nbalanceforfile);
-
-            fprintf(temp, "%s\n", tempcat);
-        } else {
-            char tempcat[1000] = "";
-            strcat(tempcat, fetchedid);
-            strcat(tempcat, "$");
-            strcat(tempcat, fetchedpin);
-            strcat(tempcat, "$");
-            strcat(tempcat, fetchedstatus);
-            strcat(tempcat, "$");
-            strcat(tempcat, fetchedbalance);
-            fprintf(temp, "%s", tempcat);
-        }
-
-
-
-
-
-
-}
-fclose(temp);
-fclose(creditcard);
-
-remove("creditcard.txt");
-rename("temp.txt","creditcard.txt");
-
-
-
+///-------------deduct money from card-----------
+moneydeduct(id,nbalanceforfile);
+///-----------------------------------
 
 ///-----------------------------------------------------------------------
 
 
-printf("\n");
-foundseat[seatcheck-1]='1';
+///seat marking as visited
 
-
-
-
-
-///changing phase based on ticket selection
-
-///---------------------seat booking----------------
-
-///found seat = 101001111101001011111
-///storebus = Baler-bus$100tk$101001111101001011111
-
-seat = fopen("seat.txt", "r");
-temp=fopen("temp.txt","w");
-char line3[500];
-
-while (fgets(line3, sizeof(line3), seat)){
-    if (strcmp(storebus, line3) == 0) {
-            char *bus_name = strtok(line3, "$");
-            char *price = strtok(NULL, "$");
-            char *availability = strtok(NULL, "$");
-
-            //printf("bus name = %s || bus price is = %s  || bus availability = %s\n",bus_name,price,availability);
-
-
-            char tempcat[1000] = "";
-            strcat(tempcat, bus_name);
-            strcat(tempcat, "$");
-            strcat(tempcat, price);
-            strcat(tempcat, "$");
-            strcat(tempcat, foundseat);
-
-            fprintf(temp, "%s", tempcat);
-        } else {
-            fprintf(temp, "%s", line3);
-        }
-
-
-
-
-
-}
-
-
-
-
-fclose(seat);
-fclose(temp);
-
-remove("seat.txt");
-rename("temp.txt", "seat.txt") ;
-system("cls");
-printf("\n\n\n\n\n\n\n\n\n");
-print_centered("Seat booking successful.....");
-Sleep(4000);
-system("cls");
-
-
-
-
+markseatvisited(foundseat,seatcheck,storebus);
 
 
 
