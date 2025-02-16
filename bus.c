@@ -233,7 +233,7 @@
             int ns=strlen(foundseat)-1;
             ///-----------------seat design-------------------------------------
             seatdesign(ns,foundseat);
-            //printf("--------------------\n");
+            ///printf("--------------------\n");
             printf("\n\n");
             int available=0;
             for(int i=0; i<ns; i++)
@@ -314,24 +314,23 @@ if(match==true){
 
 int newbalance=atoi(balanceincard)-atoi(seatprice);
 if(newbalance>=0){
+///-------balance deduction "if" statement starts-------------------
 char nbalanceforfile[100]="";
 sprintf(nbalanceforfile, "%d", newbalance);
 
-///-------------deduct money from card-----------
+///-------------deduct money from card---------------------------------
 moneydeduct(id,nbalanceforfile);
-///-----------------------------------
-
-///-----------------------------------------------------------------------
+///--------------------------------------------------------------------
 
 
-///seat marking as visited
+///------------------seat marking as visited---------------------------
 
 markseatvisited(foundseat,seatcheck,storebus);
 
+///--------------------------------------------------------------------
 
 
-
-///--------------------------
+///-------balance deduction "if" statement ends-------------------------
 }
 else{
         system("cls");
