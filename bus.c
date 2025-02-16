@@ -393,13 +393,6 @@ if(match==true){
     */
 
 int newbalance=atoi(balanceincard)-atoi(seatprice);
-system("cls");
-printf("balance in card is = %d\n",atoi(balanceincard));
-printf("seat price is = %d\n",atoi(seatprice));
-printf("new balance is = %d\n",newbalance);
-Sleep(5000);
-
-
 if(newbalance>=0){
 char nbalanceforfile[100]="";
 sprintf(nbalanceforfile, "%d", newbalance);
@@ -510,7 +503,7 @@ rename("temp.txt", "seat.txt") ;
 system("cls");
 printf("\n\n\n\n\n\n\n\n\n");
 print_centered("Seat booking successful.....");
-Sleep(2000);
+Sleep(4000);
 system("cls");
 
 
@@ -523,15 +516,19 @@ system("cls");
 ///--------------------------
 }
 else{
-    printf("insufficient balance Please recharge");
+        system("cls");
+printf("\n\n\n\n\n\n\n\n\n\n");
+    print_centered("insufficient balance Please recharge");
     Sleep(4000);
     system("cls");
 }
 
 
 }else{
-    printf("Credit card details didnt match.......");
-    Sleep(2000);
+    system("cls");
+printf("\n\n\n\n\n\n\n\n\n\n");
+    print_centered("Credit card details didnt match");
+    Sleep(3000);
     system("cls");
 
 }
@@ -548,9 +545,9 @@ else{
             else
             {
                 system("cls");
-                printf("\n\n\n\n\n\n");
+                printf("\n\n\n\n\n\n\n\n\n\n");
                 print_centered("No seat available currently,Please try again later.....");
-                Sleep(1500);
+                Sleep(3000);
             }
 
 

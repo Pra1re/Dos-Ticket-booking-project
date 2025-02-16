@@ -5,6 +5,7 @@
 #include <windows.h>
 #include<stdbool.h>
  void userdash(){
+     system("cls");
  printf("\n\n\n");
     print_centered("----------------------------------");
 
@@ -50,7 +51,7 @@
         if(strcmp(fetchedid,id)==0 && strcmp(fetchedpin,pin)==0 && strcmp(fetchedstatus,"1")==0){
             notexists=false;
 
-            printf("Your current balance is = %s ",fetchedbalance);
+            printf("Your current balance is: %s ",fetchedbalance);
             break;
 
         }
