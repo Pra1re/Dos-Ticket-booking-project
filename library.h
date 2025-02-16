@@ -9,3 +9,4 @@ int homexit();
 int travordash();
 void userdash();
 void welcome_screen();
+void seatdesign(int ns,char *foundseat);

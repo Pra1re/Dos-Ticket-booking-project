@@ -125,10 +125,13 @@ if(match==true){
 
 
 int r;
+do{
 printf("Enter recharge amount: ");
-
 scanf("%d",&r);
-
+if(r<=0){
+    printf("Please enter a valid recharge amount!!\n");
+}
+}while(r<=0);
 
 int newbalance=atoi(balanceincard)+r;
 char nbalanceforfile[100]="";
