@@ -1,98 +1,96 @@
-UttaraChittagong$Desh Travels$500tk
-UttaraChittagong$Hanif Enterprise$500tk
-UttaraChittagong$Shyamoli Paribahan$500tk
-UttaraChittagong$Green Line$500tk
-UttaraChittagong$Ena Transport$500tk
-UttaraCox's Bazar$Desh Travels$700tk
-UttaraCox's Bazar$Hanif Enterprise$700tk
-UttaraCox's Bazar$Shyamoli Paribahan$700tk
-UttaraCox's Bazar$Green Line$700tk
-UttaraCox's Bazar$Ena Transport$700tk
-UttaraKhulna$Desh Travels$600tk
-UttaraKhulna$Hanif Enterprise$600tk
-UttaraKhulna$Shyamoli Paribahan$600tk
-UttaraKhulna$Green Line$600tk
-UttaraKhulna$Ena Transport$600tk
-UttaraFaridpur$Desh Travels$400tk
-UttaraFaridpur$Hanif Enterprise$400tk
-UttaraFaridpur$Shyamoli Paribahan$400tk
-UttaraFaridpur$Green Line$400tk
-UttaraFaridpur$Ena Transport$400tk
-UttaraBarishal$Desh Travels$550tk
-UttaraBarishal$Hanif Enterprise$550tk
-UttaraBarishal$Shyamoli Paribahan$550tk
-UttaraBarishal$Green Line$550tk
-UttaraBarishal$Ena Transport$550tk
-KhilkhetChittagong$Desh Travels$500tk
-KhilkhetChittagong$Hanif Enterprise$500tk
-KhilkhetChittagong$Shyamoli Paribahan$500tk
-KhilkhetChittagong$Green Line$500tk
-KhilkhetChittagong$Ena Transport$500tk
-KhilkhetCox's Bazar$Desh Travels$700tk
-KhilkhetCox's Bazar$Hanif Enterprise$700tk
-KhilkhetCox's Bazar$Shyamoli Paribahan$700tk
-KhilkhetCox's Bazar$Green Line$700tk
-KhilkhetCox's Bazar$Ena Transport$700tk
-KhilkhetKhulna$Desh Travels$600tk
-KhilkhetKhulna$Hanif Enterprise$600tk
-KhilkhetKhulna$Shyamoli Paribahan$600tk
-KhilkhetKhulna$Green Line$600tk
-KhilkhetKhulna$Ena Transport$600tk
-KhilkhetFaridpur$Desh Travels$400tk
-KhilkhetFaridpur$Hanif Enterprise$400tk
-KhilkhetFaridpur$Shyamoli Paribahan$400tk
-KhilkhetFaridpur$Green Line$400tk
-KhilkhetFaridpur$Ena Transport$400tk
-KhilkhetBarishal$Desh Travels$550tk
-KhilkhetBarishal$Hanif Enterprise$550tk
-KhilkhetBarishal$Shyamoli Paribahan$550tk
-KhilkhetBarishal$Green Line$550tk
-KhilkhetBarishal$Ena Transport$550tk
-MohakhaliChittagong$Desh Travels$500tk
-MohakhaliChittagong$Hanif Enterprise$500tk
-MohakhaliChittagong$Shyamoli Paribahan$500tk
-MohakhaliChittagong$Green Line$500tk
-MohakhaliChittagong$Ena Transport$500tk
-MohakhaliCox's Bazar$Desh Travels$700tk
-MohakhaliCox's Bazar$Hanif Enterprise$700tk
-MohakhaliCox's Bazar$Shyamoli Paribahan$700tk
-MohakhaliCox's Bazar$Green Line$700tk
-MohakhaliCox's Bazar$Ena Transport$700tk
-MohakhaliKhulna$Desh Travels$600tk
-MohakhaliKhulna$Hanif Enterprise$600tk
-MohakhaliKhulna$Shyamoli Paribahan$600tk
-MohakhaliKhulna$Green Line$600tk
-MohakhaliKhulna$Ena Transport$600tk
-MohakhaliFaridpur$Desh Travels$400tk
-MohakhaliFaridpur$Hanif Enterprise$400tk
-MohakhaliFaridpur$Shyamoli Paribahan$400tk
-MohakhaliFaridpur$Green Line$400tk
-MohakhaliFaridpur$Ena Transport$400tk
-MohakhaliBarishal$Desh Travels$550tk
-MohakhaliBarishal$Hanif Enterprise$550tk
-MohakhaliBarishal$Shyamoli Paribahan$550tk
-MohakhaliBarishal$Green Line$550tk
-MohakhaliBarishal$Ena Transport$550tk
-SaydabadChittagong$Desh Travels$500tk
-SaydabadChittagong$Hanif Enterprise$500tk
-SaydabadChittagong$Shyamoli Paribahan$500tk
-SaydabadChittagong$Green Line$500tk
-SaydabadChittagong$Ena Transport$500tk
-SaydabadCox's Bazar$Desh Travels$700tk
-SaydabadCox's Bazar$Hanif Enterprise$700tk
-SaydabadCox's Bazar$Shyamoli Paribahan$700tk
-SaydabadCox's Bazar$Green Line$700tk
-SaydabadCox's Bazar$Ena Transport$700tk
-SaydabadKhulna$Desh Travels$600tk
-SaydabadKhulna$Hanif Enterprise$600tk
-SaydabadKhulna$Shyamoli Paribahan$600tk
-SaydabadKhulna$Green Line$600tk
-SaydabadKhulna$Ena Transport$600tk
-SaydabadFaridpur$Desh Travels$400tk
-SaydabadFaridpur$Hanif Enterprise$400tk
-SaydabadFaridpur$Shyamoli Paribahan$400tk
-SaydabadFaridpur$Green Line$400tk
-SaydabadFaridpur$Ena Transport$400tk
-SaydabadBarishal$Desh Travels$550
-
- 
+UttaraChittagong$Desh Travels$1200.00tk
+UttaraChittagong$SaintmartinOne$1200.00tk
+UttaraChittagong$Euro Coach$800.00tk
+UttaraChittagong$Saintmartin Paribahan$600.00tk
+UttaraChittagong$Shyamoli NR Travels$650.00tk
+UttaraCox's Bazar$Nobel Paribahan$1200.00tk
+UttaraCox's Bazar$New Bolesswar$1100.00tk
+UttaraCox's Bazar$Saintmartin Shohardo$800.00tk
+UttaraCox's Bazar$Green Line$600.00tk
+UttaraCox's Bazar$Doel Express$800.00tk
+UttaraKhulna$Shohagh Paribahan (Pvt) Ltd$1000.00tk
+UttaraKhulna$FalguniModhumoti Paribahan$1000.00tk
+UttaraKhulna$Hanif Enterprise$1200.00tk
+UttaraKhulna$Green Line$1000.00tk
+UttaraKhulna$H.R Travels$1400.00tk
+UttaraFaridpur$Sundarban Express$1400.00tk
+UttaraFaridpur$Hanif Enterprise$1100.00tk
+UttaraFaridpur$H.R Travels$1200.00tk
+UttaraFaridpur$Green Line$1400.00tk
+UttaraFaridpur$Royal Paribahan$600.00tk
+UttaraBarishal$Desh Travels$800.00tk
+UttaraBarishal$Hanif Enterprise$1250.00tk
+UttaraBarishal$Shyamoli NR Travels$1500.00tk
+UttaraBarishal$Shanti Paribahan$1250.00tk
+UttaraBarishal$Sakura Paribahan$850.00tk
+KhilkhetChittagong$Iconic Express$850.00tk
+KhilkhetChittagong$Evergreen Transport Ltd.$950.00tk
+KhilkhetChittagong$Purbasha Paribahan$750.00tk
+KhilkhetChittagong$Shyamoli NR Travels$600.00tk
+KhilkhetChittagong$Ahad Enterprise$700.00tk
+KhilkhetCox's Bazar$Relax king Service$650.00tk
+KhilkhetCox's Bazar$Saintmartin Square Paribahan$700.00tk
+KhilkhetCox's Bazar$Bengal Paribahan$700.00tk
+KhilkhetCox's Bazar$Asia Aircon$900.00tk
+KhilkhetCox's Bazar$Himachol Gold Line$900.00tk
+KhilkhetKhulna$Welcome Express$800.00tk
+KhilkhetKhulna$H.R Travels$860.00tk
+KhilkhetKhulna$Royal Paribahan$780.00tk
+KhilkhetKhulna$Green Line$700.00tk
+KhilkhetKhulna$Shohagh Paribahan (Pvt) Ltd$720.00tk
+KhilkhetFaridpur$Desh Travels$700.00tk
+KhilkhetFaridpur$Hanif Enterprise$900.00tk
+KhilkhetFaridpur$Sundarban Express$650.00tk
+KhilkhetFaridpur$Green Line$500.00tk
+KhilkhetFaridpur$Purbasha Paribahan$700.00tk
+KhilkhetBarishal$Desh Travels$740.00tk
+KhilkhetBarishal$Hanif Enterprise$700.00tk
+KhilkhetBarishal$Shyamoli Paribahan$750.00tk
+KhilkhetBarishal$Green Line$860.00tk
+KhilkhetBarishal$Ena Transport$730.00tk
+MohakhaliChittagong$Imperial Express$1500.00tk
+MohakhaliChittagong$Senjuti Travels$800.00tk
+MohakhaliChittagong$S.Alam Service$650.00tk
+MohakhaliChittagong$Shanti Paribahan$800.00tk
+MohakhaliChittagong$Relax Transport$1200.00tk
+MohakhaliCox's Bazar$AlMizan$720.00tk
+MohakhaliCox's Bazar$46 Express$750.00tk
+MohakhaliCox's Bazar$Arabian Express$1200.00tk
+MohakhaliCox's Bazar$N Mullick express$1400.00tk
+MohakhaliCox's Bazar$Saintmartin Sea View Travels LTD$800.00tk
+MohakhaliKhulna$Shohagh Paribahan (Pvt) Ltd$800.00tk
+MohakhaliKhulna$Hanif Enterprise$600.00tk
+MohakhaliKhulna$Shyamoli Paribahan$600.00tk
+MohakhaliKhulna$Green Line$650.00tk
+MohakhaliKhulna$Shyamoli NR Travels$600.00tk
+MohakhaliFaridpur$Desh Travels$900.00tk
+MohakhaliFaridpur$Hanif Enterprise$1000.00tk
+MohakhaliFaridpur$Shyamoli Paribahan$1200.00tk
+MohakhaliFaridpur$Green Line$1000.00tk
+MohakhaliFaridpur$Sundarban Express$500.00tk
+MohakhaliBarishal$Desh Travels$800.00tk
+MohakhaliBarishal$Hanif Enterprise$900.00tk
+MohakhaliBarishal$Shyamoli Paribahan$1000.00tk
+MohakhaliBarishal$Green Line$800.00tk
+MohakhaliBarishal$Islam Paribahan$700.00tk
+SaydabadChittagong$Grameen Travels$1000.00tk
+SaydabadChittagong$Super sony$900.00tk
+SaydabadChittagong$Sonya Enterprise$950.00tk
+SaydabadChittagong$Green Line$750.00tk
+SaydabadChittagong$Jeddah Express$800.00tk
+SaydabadCox's Bazar$AK Travels$750.00tk
+SaydabadCox's Bazar$Signature Travels$850.00tk
+SaydabadCox's Bazar$Cox's Express$500.00tk
+SaydabadCox's Bazar$Green Saintmartin Express$600.00tk
+SaydabadCox's Bazar$President Travels$750.00tk
+SaydabadKhulna$Desh Travels$950.00tk
+SaydabadKhulna$Hanif Enterprise$820.00tk
+SaydabadKhulna$Shyamoli Paribahan$750.00tk
+SaydabadKhulna$Green Line$1000.00tk
+SaydabadKhulna$Shyamoli NR Travels$750.00tk
+SaydabadFaridpur$Desh Travels$900.00tk
+SaydabadFaridpur$Hanif Enterprise$1400.00tk
+SaydabadFaridpur$Shyamoli Paribahan$1500.00tk
+SaydabadFaridpur$Green Line$930.00tk
+SaydabadFaridpur$Sundarban Express$900.00tk
+SaydabadBarishal$Shohagh Paribahan (Pvt) Ltd$800.00tk

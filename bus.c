@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <windows.h>
 
+#include<stdbool.h>
 
  void bus(){
 
@@ -180,7 +181,7 @@
             char seatline[1000];
             char storebus[1000];
 
-            char foundseat[1000];
+            char foundseat[1000],seatprice[1000];
             while (fgets(seatline, sizeof(seatline), seat))
             {
                 // Check if the line starts with x
@@ -190,6 +191,7 @@
                     char *bus_names = strtok(seatline, "$");
                     char *bus_price = strtok(NULL, "$");
                     char *seats = strtok(NULL, "$");
+                    strcpy(seatprice,bus_price);
 
 
 
@@ -242,60 +244,60 @@
                     }*/
                     if(j<=8){
                     if((j+3)<ns){
-                            printf("---------------------                         ---------------------\n");
+                            printf("                        ---------------------                         ---------------------\n");
                             if(j<8){
 
-         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j+1):printf("|    \033[32m%d\033[0m    ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |                         ",j+2):printf("|    \033[32m%d\033[0m    |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m    ",j+3):printf("|    \033[32m%d\033[0m    ",j+3));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+4):printf("|    \033[32m%d\033[0m    |\n",j+4));
+         (foundseat[j]=='1'?printf("                        |    \033[31m%d\033[0m    ",j+1):printf("                        |    \033[32m%d\033[0m    ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |                         ",j+2):printf("|    \033[32m%d\033[0m    |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m    ",j+3):printf("|    \033[32m%d\033[0m    ",j+3));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+4):printf("|    \033[32m%d\033[0m    |\n",j+4));
                             }
                             else{
-                                (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j+1):printf("|    \033[32m%d\033[0m    ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+2):printf("|    \033[32m%d\033[0m   |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   ",j+3):printf("|    \033[32m%d\033[0m   ",j+3));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+4):printf("|    \033[32m%d\033[0m   |\n",j+4));
+                                (foundseat[j]=='1'?printf("                        |    \033[31m%d\033[0m    ",j+1):printf("                        |    \033[32m%d\033[0m    ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+2):printf("|    \033[32m%d\033[0m   |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   ",j+3):printf("|    \033[32m%d\033[0m   ",j+3));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+4):printf("|    \033[32m%d\033[0m   |\n",j+4));
 
                             }
                     }
                     else if((j+2)<ns){
-                        printf("---------------------                          -----------\n");
+                        printf("                        ---------------------                          -----------\n");
 
-         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j+1):printf("|    \033[32m%d\033[0m    ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |                         ",j+2):printf("|    \033[32m%d\033[0m    |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+3):printf("|    \033[32m%d\033[0m    |\n",j+3));
+         (foundseat[j]=='1'?printf("                        |    \033[31m%d\033[0m    ",j+1):printf("                        |    \033[32m%d\033[0m    ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |                         ",j+2):printf("|    \033[32m%d\033[0m    |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+3):printf("|    \033[32m%d\033[0m    |\n",j+3));
 
 
                     }
                     else if((j+1)<ns){
 
-                        printf("---------------------\n");
-         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    ",j+1):printf("|    \033[32m%d\033[0m    ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+2):printf("|    \033[32m%d\033[0m    |\n",j+2));
+                        printf("                        ---------------------\n");
+         (foundseat[j]=='1'?printf("                        |    \033[31m%d\033[0m    ",j+1):printf("                        |    \033[32m%d\033[0m    ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+2):printf("|    \033[32m%d\033[0m    |\n",j+2));
 
                     }
                     else{
-                         printf("-----------\n");
+                         printf("                        -----------\n");
 
-      (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m    |\n",j+1):printf("|    \033[32m%d\033[0m    |\n",j+1));
+      (foundseat[j]=='1'?printf("                        |    \033[31m%d\033[0m    |\n",j+1):printf("                        |    \033[32m%d\033[0m    |\n",j+1));
 
 
                     }}else{
 
                     if((j+3)<ns){
-                            printf("---------------------                         ---------------------\n");
+                            printf("                        ---------------------                         ---------------------\n");
 
-         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   ",j+1):printf("|    \033[32m%d\033[0m   ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+2):printf("|    \033[32m%d\033[0m   |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   ",j+3):printf("|    \033[32m%d\033[0m   ",j+3));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+4):printf("|    \033[32m%d\033[0m   |\n",j+4));
+         (foundseat[j]=='1'?printf("                        |    \033[31m%d\033[0m   ",j+1):printf("                        |    \033[32m%d\033[0m   ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+2):printf("|    \033[32m%d\033[0m   |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   ",j+3):printf("|    \033[32m%d\033[0m   ",j+3));(foundseat[j+3]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+4):printf("|    \033[32m%d\033[0m   |\n",j+4));
 
                     }
                     else if((j+2)<ns){
-                        printf("---------------------                          -----------\n");
+                        printf("                        ---------------------                          -----------\n");
 
-         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   ",j+1):printf("|    \033[32m%d\033[0m   ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+2):printf("|    \033[32m%d\033[0m   |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+3):printf("|    \033[32m%d\033[0m   |\n",j+3));
+         (foundseat[j]=='1'?printf("                        |    \033[31m%d\033[0m   ",j+1):printf("                        |    \033[32m%d\033[0m   ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |                         ",j+2):printf("|    \033[32m%d\033[0m   |                         ",j+2));(foundseat[j+2]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+3):printf("|    \033[32m%d\033[0m   |\n",j+3));
 
 
                     }
                     else if((j+1)<ns){
 
-                        printf("---------------------\n");
-         (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   ",j+1):printf("|    \033[32m%d\033[0m   ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+2):printf("|    \033[32m%d\033[0m   |\n",j+2));
+                        printf("                        ---------------------\n");
+         (foundseat[j]=='1'?printf("                        |    \033[31m%d\033[0m   ",j+1):printf("                        |    \033[32m%d\033[0m   ",j+1));(foundseat[j+1]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+2):printf("|    \033[32m%d\033[0m   |\n",j+2));
 
                     }
                     else{
-                         printf("-----------\n");
+                         printf("                        -----------\n");
 
-      (foundseat[j]=='1'?printf("|    \033[31m%d\033[0m   |\n",j+1):printf("|    \033[32m%d\033[0m   |\n",j+1));
+      (foundseat[j]=='1'?printf("                        |    \033[31m%d\033[0m   |\n",j+1):printf("                        |    \033[32m%d\033[0m   |\n",j+1));
 
 
                     }
@@ -323,6 +325,8 @@
             }
             if(available>0)
             {
+
+
                 int seatcheck;
 
 
@@ -343,13 +347,115 @@
 
 
 ///--------------printing loop------------------
+///take card id and pin input if its valid proceed else show card not valid cant book seat
+    char id[100];
+    char pin[100];
+    printf("Enter card id: ");
+    scanf("%s",id);
+    printf("Enter pin:     ");
+    scanf("%s",pin);
 
-///changing phase based on ticket selection
+///look for the id and pin in  txt file
+
+
+FILE *creditcard=fopen("creditcard.txt","r");
+
+char line[100]="";
+bool match=false;///dont forget to clear on logout very important
+char balanceincard[100]="";
+while (fgets(line, sizeof(line), creditcard)){
+
+    char *fetchedid=strtok(line,"$");
+    char *fetchedpin=strtok(NULL,"$");
+    char *fetchedstatus=strtok(NULL,"$");
+    char *fetchedbalance=strtok(NULL,"$");
+    strcpy(balanceincard,fetchedbalance);
+        if(strcmp(fetchedid,id)==0 && strcmp(fetchedpin,pin)==0 && strcmp(fetchedstatus,"1")==0){
+            match=true;
+            break;
+
+        }
 
 
 
-                printf("\n");
-                foundseat[seatcheck-1]='1';
+
+}
+fclose(creditcard);
+if(match==true){
+///credit card details matched can book seat now
+/*int num = 123;
+    char str[20];  // Ensure the buffer is large enough
+    sprintf(str, "%d", num);
+//----------------------------
+    char str[] = "456";
+    int num = atoi(str);
+
+    */
+
+int newbalance=atoi(balanceincard)-atoi(seatprice);
+system("cls");
+printf("balance in card is = %d\n",atoi(balanceincard));
+printf("seat price is = %d\n",atoi(seatprice));
+printf("new balance is = %d\n",newbalance);
+Sleep(5000);
+
+
+if(newbalance>=0){
+char nbalanceforfile[100]="";
+sprintf(nbalanceforfile, "%d", newbalance);
+
+FILE *temp=fopen("temp.txt","w");
+creditcard=fopen("creditcard.txt","r");
+char line2[100];
+while(fgets(line2,sizeof(line2),creditcard)){
+
+        char *fetchedid=strtok(line2,"$");
+        char *fetchedpin=strtok(NULL,"$");
+        char *fetchedstatus=strtok(NULL,"$");
+        char *fetchedbalance=strtok(NULL,"$");
+    if (strcmp(fetchedid, id) == 0) {
+            char tempcat[1000] = "";
+            strcat(tempcat, fetchedid);
+            strcat(tempcat, "$");
+            strcat(tempcat, fetchedpin);
+            strcat(tempcat, "$");
+            strcat(tempcat, fetchedstatus);
+            strcat(tempcat, "$");
+            strcat(tempcat, nbalanceforfile);
+
+            fprintf(temp, "%s\n", tempcat);
+        } else {
+            char tempcat[1000] = "";
+            strcat(tempcat, fetchedid);
+            strcat(tempcat, "$");
+            strcat(tempcat, fetchedpin);
+            strcat(tempcat, "$");
+            strcat(tempcat, fetchedstatus);
+            strcat(tempcat, "$");
+            strcat(tempcat, fetchedbalance);
+            fprintf(temp, "%s", tempcat);
+        }
+
+
+
+
+
+
+}
+fclose(temp);
+fclose(creditcard);
+
+remove("creditcard.txt");
+rename("temp.txt","creditcard.txt");
+
+
+
+
+///-----------------------------------------------------------------------
+
+
+printf("\n");
+foundseat[seatcheck-1]='1';
 
 
 
@@ -362,54 +468,81 @@
 ///found seat = 101001111101001011111
 ///storebus = Baler-bus$100tk$101001111101001011111
 
-                seat = fopen("seat.txt", "r");
-                FILE *temp=fopen("temp.txt","w");
-                char line2[500];
+seat = fopen("seat.txt", "r");
+temp=fopen("temp.txt","w");
+char line3[500];
 
-                while (fgets(line2, sizeof(line2), seat))
-                {
-                    if (strcmp(storebus, line2) == 0)
-                    {
-                        char *bus_name = strtok(line2, "$");
-                        char *price = strtok(NULL, "$");
-                        char *availability = strtok(NULL, "$");
+while (fgets(line3, sizeof(line3), seat)){
+    if (strcmp(storebus, line3) == 0) {
+            char *bus_name = strtok(line3, "$");
+            char *price = strtok(NULL, "$");
+            char *availability = strtok(NULL, "$");
 
-                        //printf("bus name = %s || bus price is = %s  || bus availability = %s\n",bus_name,price,availability);
+            //printf("bus name = %s || bus price is = %s  || bus availability = %s\n",bus_name,price,availability);
 
 
-                        char tempcat[1000] = "";
-                        strcat(tempcat, bus_name);
-                        strcat(tempcat, "$");
-                        strcat(tempcat, price);
-                        strcat(tempcat, "$");
-                        strcat(tempcat, foundseat);
+            char tempcat[1000] = "";
+            strcat(tempcat, bus_name);
+            strcat(tempcat, "$");
+            strcat(tempcat, price);
+            strcat(tempcat, "$");
+            strcat(tempcat, foundseat);
 
-                        fprintf(temp, "%s", tempcat);
-                    }
-                    else
-                    {
-                        fprintf(temp, "%s", line2);
-                    }
+            fprintf(temp, "%s", tempcat);
+        } else {
+            fprintf(temp, "%s", line3);
+        }
 
 
 
 
 
-                }
+}
 
 
 
 
-                fclose(seat);
-                fclose(temp);
+fclose(seat);
+fclose(temp);
 
-                remove("seat.txt");
-                rename("temp.txt", "seat.txt") ;
-                system("cls");
-                printf("\n\n\n\n\n\n\n\n\n");
-                print_centered("Seat booking successful.....");
-                Sleep(1500);
-                system("cls");
+remove("seat.txt");
+rename("temp.txt", "seat.txt") ;
+system("cls");
+printf("\n\n\n\n\n\n\n\n\n");
+print_centered("Seat booking successful.....");
+Sleep(2000);
+system("cls");
+
+
+
+
+
+
+
+
+///--------------------------
+}
+else{
+    printf("insufficient balance Please recharge");
+    Sleep(4000);
+    system("cls");
+}
+
+
+}else{
+    printf("Credit card details didnt match.......");
+    Sleep(2000);
+    system("cls");
+
+}
+
+
+
+
+
+///---------------------------------------------------------------------------------------------
+///changing phase based on ticket selection
+
 
             }
             else
