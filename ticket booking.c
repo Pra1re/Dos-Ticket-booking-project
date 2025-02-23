@@ -91,7 +91,7 @@ int main()
             //rafsan am working from here
 
 
-            print_centered("U have selected Train");
+            alltrain();
         }
 //--------------------------------plane---------------------------------------
         else if(options==3)

@@ -13,3 +13,4 @@ void seatdesign(int ns,char *foundseat);
 void moneydeduct(char *id,char *nbalanceforfile);
 void markseatvisited();
 void markseatvisited(char *foundseat,int seatcheck,char *storebus);
+void alltrain();
