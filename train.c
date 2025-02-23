@@ -3,7 +3,8 @@
 #include <windows.h>
 #include <string.h>
 #include "library.h"
-
+///markasvisited = seatmarkasvisited
+///seatdesign = designallseat
 void seatmarkasvisited(char *foundseat,int selected_seat,char *seat_line)
 {
     printf("\n");

@@ -131,7 +131,10 @@ scanf("%d",&r);
 if(r<=0){
     printf("Please enter a valid recharge amount!!\n");
 }
-}while(r<=0);
+else if(r>5000){
+    printf("Max recharge amount is 5000. Please try again......\n");
+}
+}while(r<=0 || r>5000);
 
 int newbalance=atoi(balanceincard)+r;
 char nbalanceforfile[100]="";
