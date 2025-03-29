@@ -161,7 +161,7 @@ void designallseat(int ns,char *foundseat)
 void alltrain(){
 
     system("cls");  // clear console after loading completes
-    set_color(9);
+    set_color(7);
     printf("\n\n\n\n");
     print_centered("-----Welcome to BD train service-----");
     printf("\n\n");
@@ -180,7 +180,6 @@ void alltrain(){
     print_centered("| 4) Barishal            |");
     print_centered("| 5) Noakhali            |");
     print_centered("| 6) Sylhet              |");
-    print_centered("| 7) Rongpur             |");
     print_centered("|________________________|");
     printf("\n\n\n\n");
 
@@ -189,21 +188,21 @@ void alltrain(){
     {
         printf("Select your starting point : ");
         scanf("%d",&str);
-        if(str>7 || str <1)
+        if(str>6 || str <1)
             print_centered("invalid input!!try again!!!\n");
     }
-    while(str>7 || str <1);
+    while(str>6 || str <1);
 
     do
     {
         printf("Select your destination point : ");
         scanf("%d",&des);
-        if(des==str || des>7 || des <1)
+        if(des==str || des>6 || des <1)
             print_centered("invalid input!!try again!!!\n");
     }
-    while(des==str || des>7 || des <1);
+    while(des==str || des>6 || des <1);
 
-    char places[7][100]= {"Dhaka","Chattagram","Rajshahi","Barishal","Noakhali","Sylhet","Rongpur"};
+    char places[6][100]= {"Dhaka","Chattagram","Rajshahi","Barishal","Noakhali","Sylhet"};
     system("cls");
 
     strcat(places[str-1],places[des-1]);

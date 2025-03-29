@@ -1,8 +1,18 @@
-DhakaChattagram$BATMAN
-DhakaChattagram$SPIDERMAN
-ChattagramRajshahi$IRONMAN
-ChattagramRajshahi$THOR
-DhakaNoakhali$DR STRANGE
-DhakaRajshahi$BLACK PANTHER
-DhakaRajshahi$CAPTAIN AMERICA
-DhakaChattagram$HULK
+DhakaChattagram$SONAR BANGLA EXPRESS
+DhakaChattagram$SUBORNO EXPRESS
+ChattagramDhaka$TURNA EXPRESS
+ChattagramDhaka$SONAR BANGLA EXPRESS
+DhakaRajshahi$DHUMKETU EXPRESS
+DhakaRajshahi$BANALATA EXPRESS
+RajshahiDhaka$SILKCITY EXPRESS
+RajshahiDhaka$MADHUMATI EXPRESS
+DhakaBarishal$SANCHITA EXPRESS
+DhakaBarishal$MAWA EXPRESS
+BarishalDhaka$PADMA EXPRESS
+BarishalDhaka$WORST CITY EXPRESS
+DhakaNoakhali$UPOKUL EXPRESS
+NoakhaliDhaka$UPOKUL EXPRESS
+DhakaSylhet$PARABAT EXPRESS
+DhakaSylhet$KALNI EXPRESS
+SylhetDhaka$UPABAN EXPRESS
+SylhetDhaka$PARABAT EXPRESS
