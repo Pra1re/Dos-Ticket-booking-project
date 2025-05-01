@@ -1,3 +1,4 @@
+#include <stdbool.h>
 void show_loading_bar();
 int get_console_width();
 void set_color(int color);
@@ -14,3 +15,4 @@ void moneydeduct(char *id,char *nbalanceforfile);
 void markseatvisited();
 void markseatvisited(char *foundseat,int seatcheck,char *storebus);
 void alltrain();
+bool trainpayment(char *seatprice);

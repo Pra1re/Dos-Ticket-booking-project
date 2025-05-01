@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <string.h>
+#include <stdbool.h>
 #include "library.h"
 ///markasvisited = seatmarkasvisited
 ///seatdesign = designallseat
@@ -335,8 +336,10 @@ void alltrain(){
     }
     while(my_class > 5 || my_class < 1);
 
-    system("cls");
 
+    system("cls");
+//printf("price of the selected class is = %s",prices[my_class-1]);///0 based indexing
+    //Sleep(5000);
     char train_class[100];
     strcat(trains[my_train-1],classes[my_class-1]);
     strcpy(train_class,trains[my_train-1]);
@@ -450,8 +453,9 @@ void alltrain(){
     while(my_seat > total_seats || my_seat < 1 || found_seats[stmp][my_seat-1]=='1');
 
     printf("\n\n\n");
+    ///adding payment
+    bool pay=trainpayment(prices[my_class-1]);
 
-    seatmarkasvisited(found_seats[stmp], my_seat, seat_line[stmp]);
-
+if(pay) seatmarkasvisited(found_seats[stmp], my_seat, seat_line[stmp]);
 
 }
