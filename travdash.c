@@ -13,7 +13,7 @@ printf("\n\n\n");
     print_options("|  1.User Management             |");
 
     print_options("|  2.Travel                      |");
-    print_options("|  3.Logout                      |");
+    print_options("|  3.Exit                        |");
     print_centered("__________________________________");
     printf("\n\n");
 
@@ -29,7 +29,7 @@ printf("\n\n\n");
     system("cls");
     if(dashtrav==3){
             printf("\n\n\n\n\n\n\n\n\n\n");
-        print_centered("Thank you for choosing Trplify");
+        print_centered("Thank you for choosing Triplify");
         Sleep(2000);
         exit(0);
     }
