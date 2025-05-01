@@ -21,11 +21,18 @@ printf("\n\n\n");
     do{
     printf("Please select an option: ");
     scanf("%d",&dashtrav);
-    if(dashtrav>2 || dashtrav<1){
+    if(dashtrav>3 || dashtrav<1){
         print_centered("Please enter a valid option!!");
     }
     }
-    while(dashtrav>2 || dashtrav<1);
+    while(dashtrav>3 || dashtrav<1);
     system("cls");
+    if(dashtrav==3){
+            printf("\n\n\n\n\n\n\n\n\n\n");
+        print_centered("Thank you for choosing Trplify");
+        Sleep(2000);
+        exit(0);
+    }
+
     return dashtrav;
     }
